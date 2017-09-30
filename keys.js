@@ -1,12 +1,11 @@
 //Some small scripts written by The Oddball http://steamcommunity.com/id/TheOddball/ to automatically get keys from Humble Bundle or Bundle Stars.
 //What these scripts do is simply, they get all the Steam keys from the Humble Bundle or Bundle Stars page, and puts them each in a newline, ready for use on either; This userscript: https://github.com/LiteOnE/Steam-Scripts/blob/master/Batch-Keys-Activator.user.js , or This program: https://github.com/Ezzpify/SteamBulkActivator
-//Note: Bundle Stars is slightly incomplete, you need to click 'redeem' on each key, then run the function.
 
 //Bundle Stars
+$('.key.ng-scope').each(function(){$(this).find('.ng-scope').click();});
 function getKeys(){
 var keys = "";
-$('.form-control.ng-pristine.ng-valid.ng-touched').each(function(){keys = keys + $(this).val() + '\n'});
-$('.form-control.ng-pristine.ng-untouched.ng-valid').each(function(){keys = keys + $(this).val() + '\n'});
+$('.key-reveal-copy.ng-scope').each(function(){keys = keys + $(this).find('.input-group').find('.ng-valid').val() + '\n'});
 return keys;
 }
 var keys = getKeys();
@@ -17,7 +16,7 @@ document.execCommand("copy");
 $temp.remove();
 
 //BS Mini
-function getKeys(){var e="";return $(".form-control.ng-pristine.ng-valid.ng-touched").each(function(){e=e+$(this).val()+"\n"}),$(".form-control.ng-pristine.ng-untouched.ng-valid").each(function(){e=e+$(this).val()+"\n"}),e}var keys=getKeys(),$temp=$("<textarea>");$("body").append($temp),$temp.val(keys).select(),document.execCommand("copy"),$temp.remove();
+function getKeys(){var e="";return $(".key-reveal-copy.ng-scope").each(function(){e=e+$(this).find(".input-group").find(".ng-valid").val()+"\n"}),e}$(".key.ng-scope").each(function(){$(this).find(".ng-scope").click()});var keys=getKeys(),$temp=$("<textarea>");$("body").append($temp),$temp.val(keys).select(),document.execCommand("copy"),$temp.remove();
 
 //Humble
 $('.sr-unredeemed-button').each(function(){$(this).click();});
