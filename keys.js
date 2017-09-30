@@ -2,11 +2,16 @@
 //What these scripts do is simply, they get all the Steam keys from the Humble Bundle or Bundle Stars page, and puts them each in a newline, ready for use on either; This userscript: https://github.com/LiteOnE/Steam-Scripts/blob/master/Batch-Keys-Activator.user.js , or This program: https://github.com/Ezzpify/SteamBulkActivator
 
 //Bundle Stars
-$('.key.ng-scope').each(function(){$(this).find('.ng-scope').click();});
-function getKeys(){
-var keys = "";
-$('.key-reveal-copy.ng-scope').each(function(){keys = keys + $(this).find('.input-group').find('.ng-valid').val() + '\n'});
-return keys;
+$('.key.ng-scope').each(function() {
+    $(this).find('.ng-scope').click();
+});
+
+function getKeys() {
+    var keys = "";
+    $('.key-reveal-copy.ng-scope').each(function() {
+        keys = keys + $(this).find('.input-group').find('.ng-valid').val() + '\n'
+    });
+    return keys;
 }
 var keys = getKeys();
 var $temp = $("<textarea>");
@@ -15,15 +20,20 @@ $temp.val(keys).select();
 document.execCommand("copy");
 $temp.remove();
 
-//BS Mini
+//Bundle Stars Minified
 function getKeys(){var e="";return $(".key-reveal-copy.ng-scope").each(function(){e=e+$(this).find(".input-group").find(".ng-valid").val()+"\n"}),e}$(".key.ng-scope").each(function(){$(this).find(".ng-scope").click()});var keys=getKeys(),$temp=$("<textarea>");$("body").append($temp),$temp.val(keys).select(),document.execCommand("copy"),$temp.remove();
 
-//Humble
-$('.sr-unredeemed-button').each(function(){$(this).click();});
-function getKeys(){
-var keys = "";
-$('.keyfield-text').each(function(){keys = keys + $(this).text() + '\n'});
-return keys;
+//Humble Bundle
+$('.sr-unredeemed-button').each(function() {
+    $(this).click();
+});
+
+function getKeys() {
+    var keys = "";
+    $('.keyfield-text').each(function() {
+        keys = keys + $(this).text() + '\n'
+    });
+    return keys;
 }
 var keys = getKeys();
 var $temp = $("<textarea>");
@@ -32,5 +42,5 @@ $temp.val(keys).select();
 document.execCommand("copy");
 $temp.remove();
 
-//Humble Mini
+//Humble Bundle Minified
 function getKeys(){var e="";return $(".keyfield-text").each(function(){e=e+$(this).text()+"\n"}),e}$(".sr-unredeemed-button").each(function(){$(this).click()});var keys=getKeys(),$temp=$("<textarea>");$("body").append($temp),$temp.val(keys).select(),document.execCommand("copy"),$temp.remove();
