@@ -7,11 +7,13 @@ $('.key.ng-scope').each(function() {
 });
 
 function getKeys() {
-    var keys = "";
-    $('.key-reveal-copy.ng-scope').each(function() {
-        keys = keys + $(this).find('.input-group').find('.ng-valid').val() + '\n'
-    });
-    return keys;
+    setTimeout(function() {
+        var keys = "";
+        $('.key-reveal-copy.ng-scope').each(function() {
+            keys = keys + $(this).find('.input-group').find('.ng-valid').val() + '\n'
+        });
+        return keys;
+    }, 1000);
 }
 var keys = getKeys();
 var $temp = $("<textarea>");
@@ -21,9 +23,7 @@ document.execCommand("copy");
 $temp.remove();
 
 //Bundle Stars Minified
-function getKeys(){var e="";return $(".key-reveal-copy.ng-scope").each(function(){e=e+$(this).find(".input-group").find(".ng-valid").val()+"\n"}),e}$(".key.ng-scope").each(function(){$(this).find(".ng-scope").click()});var keys=getKeys(),$temp=$("<textarea>");$("body").append($temp),$temp.val(keys).select(),document.execCommand("copy"),$temp.remove();
-
-//Humble Bundle
+function getKeys(){setTimeout(function(){var e="";return $(".key-reveal-copy.ng-scope").each(function(){e=e+$(this).find(".input-group").find(".ng-valid").val()+"\n"}),e},1e3)}$(".key.ng-scope").each(function(){$(this).find(".ng-scope").click()});var keys=getKeys(),$temp=$("<textarea>");$("body").append($temp),$temp.val(keys).select(),document.execCommand("copy"),$temp.remove();
 $('.sr-unredeemed-button').each(function() {
     $(this).click();
 });
