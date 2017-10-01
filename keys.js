@@ -24,6 +24,8 @@ $temp.remove();
 
 //Bundle Stars Minified
 function getKeys(){setTimeout(function(){var e="";return $(".key-reveal-copy.ng-scope").each(function(){e=e+$(this).find(".input-group").find(".ng-valid").val()+"\n"}),e},1e3)}$(".key.ng-scope").each(function(){$(this).find(".ng-scope").click()});var keys=getKeys(),$temp=$("<textarea>");$("body").append($temp),$temp.val(keys).select(),document.execCommand("copy"),$temp.remove();
+
+//Humble Bundle
 $('.sr-unredeemed-button').each(function() {
     $(this).click();
 });
