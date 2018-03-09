@@ -46,3 +46,6 @@ $temp.remove();
 
 //Humble Bundle Minified
 function getKeys(){var e="";return $(".keyfield-text").each(function(){e=e+$(this).text()+"\n"}),e}$(".sr-unredeemed-button").each(function(){$(this).click()});var keys=getKeys(),$temp=$("<textarea>");$("body").append($temp),$temp.val(keys).select(),document.execCommand("copy"),$temp.remove();
+
+//Pastebin (for Wulf's Keybot)
+$('#paste_code').text().match(/[A-Z0-9]+-[A-Z0-9]+-[A-Z0-9]+/g).toString();
