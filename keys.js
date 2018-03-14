@@ -1,5 +1,6 @@
 //Some small scripts written by The Oddball http://steamcommunity.com/id/TheOddball/ to automatically get keys from Humble Bundle or Bundle Stars.
 //What these scripts do is simply, they get all the Steam keys from the Humble Bundle or Bundle Stars page, and puts them each in a newline, ready for use on either; This userscript: https://github.com/LiteOnE/Steam-Scripts/blob/master/Batch-Keys-Activator.user.js , or This program: https://github.com/Ezzpify/SteamBulkActivator
+//testingsomething
 
 //Bundle Stars
 $('.key.ng-scope').each(function() {
