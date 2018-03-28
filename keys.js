@@ -50,3 +50,11 @@ function getKeys(){var e="";return $(".keyfield-text").each(function(){e=e+$(thi
 
 //Pastebin (for Wulf's Keybot)
 $('#paste_code').text().match(/[A-Z0-9]+-[A-Z0-9]+-[A-Z0-9]+/g).toString();
+
+//GoGoBundle
+var steamkeys = jQuery('table[style*="width:100%;cell-spacing:1px;"]').find('td').text().match(/[A-Z0-9]{5}-[A-Z0-9]{5}-[A-Z0-9]{5}/g);
+console.log(steamkeys.filter((_,i) => i % 5 == 0).toString());
+console.log(steamkeys.filter((_,i) => i % 5 == 1).toString());
+console.log(steamkeys.filter((_,i) => i % 5 == 2).toString());
+console.log(steamkeys.filter((_,i) => i % 5 == 3).toString());
+console.log(steamkeys.filter((_,i) => i % 5 == 4).toString());
