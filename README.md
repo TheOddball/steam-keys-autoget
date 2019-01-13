@@ -1,2 +1,5 @@
-# steam-keys-autoget
-Auto gets Steam keys from a Humble Bundle or Bundle Stars page.
+# Autoget-Steam-Keys-From-Page.js
+Auto gets Steam keys from various bundle websites.
+
+# Misc-Scripts.js
+Miscellaneous scripts I've written.
